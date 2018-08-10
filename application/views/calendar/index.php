@@ -55,7 +55,7 @@
         <div class="form-group">
               
                 <label for="p-in" class="col-md-4 label-heading">Start Date</label>
-                <div class="col-md-8 input-append date form_datetime" >
+                <div class="col-md-8" >
                     <input type="text" class="form-control" name="start_date">
                 </div>
         </div>

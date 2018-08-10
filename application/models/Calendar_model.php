@@ -27,6 +27,20 @@ class Calendar_Model extends CI_Model
             $this->db->where("ID", $id)->delete("calendar_events");
         }
 
+
+    public function get_all_clients(){
+         $query = $this->db->order_by('rand()');
+         $query = $this->db->limit(3);
+         $query = $this->db->get('clients');
+         $client_emails = array();
+        foreach ($query->result() as $row)
+        {
+            array_push($client_emails,$row->email);
+        }
+
+        return $client_emails;
+    }
+
 }
 
 ?>

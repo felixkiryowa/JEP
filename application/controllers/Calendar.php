@@ -137,5 +137,24 @@ public function __construct() {
 
           redirect(site_url("calendar"));
      }
+
+     public function get_allclients(){
+         $clients = $this->calendar_model->get_all_clients(); 
+
+        //  if(!empty($clients)){
+        //         $this->email->to($clients);
+        //         $this->email->from('franciskiryowa68@gmail.com','Francis Kiryowa');
+        //         $this->email->subject('message to all our clients');
+        //         $this->email->message('This is a test message to all our clients');
+        //         $this->email->send();
+                
+        //         echo "Email has Been Sent To Different Clients";
+        //  }else{
+        //      echo "Email has not Been Sent To Different Clients";
+        //  }
+         
+       
+         print_r($clients);
+    }
 }
 
